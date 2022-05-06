@@ -8,7 +8,7 @@
 
 <hr>
 <h1>about</h1>
-Script python DOS or DDOS attack is one of the most common attacks on sites that makes the site inaccessible. This is done by sending a large number of requests to the site in a short time and crowding its head.
+Script python DOS attack is one of the most common attacks on sites that makes the site inaccessible. This is done by sending a large number of requests to the site in a short time and crowding its head.
 <hr>
 <h1>How to use</h1>
 

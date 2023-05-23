@@ -1,6 +1,6 @@
 import os
 
-os.system('pip install termcolor && pip install colored && pip install requests && clear')
+os.system('pip install termcolor && pip install requests && clear')
 import termcolor
 from termcolor import colored
 
